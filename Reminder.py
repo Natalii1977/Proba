@@ -34,6 +34,11 @@ def check():
     window.after(10000, check)  ## функция не нагружает комп
 
 
+def play.snd():
+pygame.mixer.init()
+pygame.mixer.music.load('reminder.mp3')
+pygame.mixer.music.play()
+
 window = Tk()
 window.title('Напоминание')
 label = Label(text='Установите напоминание')
