@@ -8,6 +8,7 @@ import pygame
 
 t = 0
 
+
 def set():
     global t
     rem = sd.askstring('Время напоминания', 'Введите время напоминания в формате чч:мм в 24 часовом формате')
@@ -29,7 +30,7 @@ def check():
     if t:
         now = time.time()  ## хранит текущее время
         if now >= t:
-            play.snd()
+            play_snd()
             t = 0
     window.after(10000, check)  ## функция не нагружает комп
 
